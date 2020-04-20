@@ -1,0 +1,236 @@
+body
+{
+	width: 100%;
+	background-color: black;
+}
+#wrap
+{
+	background-color: cyan;
+}
+#namebut
+{
+	color: black;
+	font-size: 150px;
+	background-color: darkslategray;
+	border-color: transparent;
+	cursor: not-allowed;
+}
+.overlay-content
+{
+	color: red;
+	text-align: center;
+}
+.closebtn
+{
+	color: red;
+	cursor: pointer;
+	font-size: 50px;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 50px;
+}
+.messages
+{
+	font-size: 50px;
+}
+.sidebar 
+{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+#span
+{
+	font-size: 50px;
+	display: inline-block; 
+	vertical-align: top;
+	color: red;
+	margin-left: 19.5%;
+	cursor: pointer;
+}
+#title
+{
+	width: 100%;
+	font-size: 150px;
+	background-color: darkslategray;
+	margin-bottom: 150px;
+}
+#username
+{
+	font-size: 30px;
+	display: inline-block; 
+	vertical-align: top;
+	color: pink;
+	float: right;
+}
+.names
+{
+	border-color: transparent;
+	color: chocolate;
+	background-color: transparent;
+	height: 100px;
+	font-size: 40px;
+	cursor: pointer;
+}
+.rolls
+{
+	border-color: transparent;
+	color: chocolate;	
+	background-color: transparent;
+	height: 100px;
+	font-size: 40px;
+	cursor: pointer;
+}
+.tbl
+{
+	color: whitesmoke;
+	width: 350px;
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+
+.msgs
+{
+	color: navy;
+	word-spacing: 3px;
+	text-align: center;	
+	width: 700px;
+	font-size: 15px;
+	height: 50px;	
+	border-color: black;
+	outline: none;
+	background-color: whitesmoke;
+	resize: none;
+	overflow: auto;
+}
+#rate
+{
+	color: cornsilk;
+	font-size: 20px;
+	background-color: crimson;
+	cursor: pointer;
+	margin-bottom: 10px;
+	margin-top: 30px;
+}	
+.contents
+{
+	width: 100%;
+	font-size: 40px;
+	color: dimgray;
+	height: 250px;
+	background-color: palegreen;
+	text-align: center;
+}
+.contentsact
+{
+	background-color: palegreen;
+	width: 100%;
+	font-size: 40px;
+	color: dimgray;
+	height: 200px;	
+	text-align: center;
+}
+#signout
+{
+	margin-top: 30%;
+}
+.buttonspan
+{
+	color: red;
+	font-size: 20px;
+	border-color: green;
+	background-color: yellow;
+	outline-color: transparent;
+
+}
+
+
+
+.slider
+{
+  -webkit-appearance: none; 
+  background: transparent;
+}
+.slider:focus 
+{
+  outline: none; 
+}
+.slider
+{
+  width: 175px;
+  height: 30px;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 20px;
+  outline: none;
+  overflow: hidden;
+}
+.slider::-webkit-slider-thumb 
+{
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background: fuchsia;
+  cursor: alias;
+}
+.slider::-webkit-slider-runnable-track 
+{
+  cursor: alias;
+  background: lightyellow;
+  border-radius: 100px;
+}
+
+
+
+
+
+
+
+.slider2
+{
+  -webkit-appearance: none; 
+  background: transparent;
+}
+.slider2:focus 
+{
+  outline: none; 
+}
+.slider2
+{
+  width: 175px;
+  height: 30px;
+  appearance: none;
+  background-color: red;
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px black, inset 0 0 4px #000000;
+  outline: none;
+  overflow: hidden;
+}
+
+ .slider2::-webkit-slider-thumb 
+ {
+  cursor: none;
+  box-shadow: -100vw 0 0 calc(100vw - 16px / 2) yellow;
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background: yellow;
+  cursor: alias;
+}
+.slider2::-webkit-slider-runnable-track 
+{
+  cursor: alias;
+  background: transparent;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+
