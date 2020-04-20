@@ -1,5 +1,6 @@
 <?php
-
+include("header.php");
+include("config.php");
 
 
 if (isset($_POST['submit'])) {
@@ -8,12 +9,6 @@ if (isset($_POST['submit'])) {
 	$from = "user_" . $_POST['Username'];
 }
 
-
-
-$connect = mysqli_connect('localhost', 'root', 'may', 'prjct_ln');
-if (!$connect) {
-	echo "Connection error" . mysqli_connect_error();
-}
 $name = $username = $email = $password = $branch = "";
 
 if (isset($_POST['submit'])) {
@@ -93,26 +88,6 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="#">Prjct_ln</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-
 	<form id="InputForm" method="post">
 
 		<div id="table">
