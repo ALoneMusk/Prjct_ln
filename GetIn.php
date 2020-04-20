@@ -3,7 +3,7 @@
 session_start();
 
 
-$connect = mysqli_connect('localhost', '', '', 'prjct_ln');
+$connect = mysqli_connect('localhost', 'root', 'may', 'prjct_ln');
 	if(!$connect)
 	{
 		echo "Connection error" . mysqli_connect_error();
