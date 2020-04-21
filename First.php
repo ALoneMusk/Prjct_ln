@@ -323,14 +323,6 @@ foreach ($information as $check) {
 		<?php } ?>
 	<?php } ?>
 	<script type="text/javascript">
-		function openSide() {
-			document.getElementById("side").style.width = "100%";
-		}
-
-		function closeSide() {
-			document.getElementById("side").style.width = "0%";
-		}
-
 		var a = '';
 
 		function detect() {
