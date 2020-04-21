@@ -10,7 +10,6 @@ if (!$_SESSION['authorise']) {
 
 $user = $_SESSION['CRN'];
 
-//include("header.php");
 include("config.php");
 
 
@@ -29,9 +28,10 @@ foreach ($information as $check) {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/gif/png" href="img/logo.png">
 	<title>
@@ -39,7 +39,7 @@ foreach ($information as $check) {
 	</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -61,12 +61,14 @@ foreach ($information as $check) {
 			color: red;
 			text-align: center;
 		}
+
 		#zoom:hover {
 			transform-style: preserve-3d;
 			transform: rotateY(360deg);
 			transition: transform 2s;
- 
-}
+
+		}
+
 		.closebtn {
 			color: red;
 			cursor: pointer;
@@ -128,11 +130,11 @@ foreach ($information as $check) {
 
 		}
 
-		h3{
-		color: grey;
-		font-size: 20px;
-		font-kerning: 20px;		
-	}
+		h3 {
+			color: grey;
+			font-size: 20px;
+			font-kerning: 20px;
+		}
 
 		.button {
 			color: deepskyblue;
@@ -154,110 +156,110 @@ foreach ($information as $check) {
 </head>
 
 <body>
-<!--    Nav Bar -->
+	<!--    Nav Bar -->
 
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-<div class="container-fluid">
-	<a class="navbar-brand text-primary font-weight-bold" href="#"><img src="img/logo.png" height="70" width="180"></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="First.php">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="about.html">About Us</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="Issue.php">Feedback</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="signout.php">Signout</a>
-			</li>
-		</ul>
-	</div>
-</div>	
-</nav>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand text-primary font-weight-bold" href="#"><img src="img/logo.png" height="70" width="180"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="First.php">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Issue.php">Feedback</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="signout.php">Signout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-<!-- nav bar ends -->
+	<!-- nav bar ends -->
 
-<!-- gropu cards for subjects starts  -->
+	<!-- gropu cards for subjects starts  -->
 
-<div class="container-fluid padding">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Departments</h2>
-                <p class="text-center">See what rest of your classmates are doing</p>
+	<div class="container-fluid padding">
+		<div class="container">
+			<div class="intro">
+				<h2 class="text-center">Departments</h2>
+				<p class="text-center">See what rest of your classmates are doing</p>
 			</div>
 			<div class="container-fluid padding">
-            <div class="row padding">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/1.jpg"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Electrical Engineering</h3>
+				<div class="row padding">
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/1.jpg"></a>
+							<div class="card-body">
+								<h3 class="card-title">Electrical Engineering</h3>
+							</div>
 						</div>
-                    </div>
-				</div>
-				<div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/2.jpg"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Computer Science</h3>
+					</div>
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/2.jpg"></a>
+							<div class="card-body">
+								<h3 class="card-title">Computer Science</h3>
+							</div>
 						</div>
-                    </div>
-				</div>
-				<div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/3.jpg"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Information Technology</h3>
+					</div>
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/3.jpg"></a>
+							<div class="card-body">
+								<h3 class="card-title">Information Technology</h3>
+							</div>
 						</div>
-                    </div>
-				</div>
-				<div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/4.jpg"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Electronics Engineering</h3>
+					</div>
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/4.jpg"></a>
+							<div class="card-body">
+								<h3 class="card-title">Electronics Engineering</h3>
+							</div>
 						</div>
-                    </div>
-				</div>
-				<div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/5.jpg"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Mechanical Engineering</h3>
+					</div>
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/5.jpg"></a>
+							<div class="card-body">
+								<h3 class="card-title">Mechanical Engineering</h3>
+							</div>
 						</div>
-                    </div>
-				</div>
-				<div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/6.jpg"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Civil Engineering</h3>
+					</div>
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/6.jpg"></a>
+							<div class="card-body">
+								<h3 class="card-title">Civil Engineering</h3>
+							</div>
 						</div>
-                    </div>
-				</div>
-				<div class="col-md-6 col-lg-4 item">
-                    <div class="card">
-						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/7.png"></a>
-						<div class="card-body">
-                        <h3 class="card-title">Production Engineering</h3>
+					</div>
+					<div class="col-md-6 col-lg-4 item">
+						<div class="card">
+							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/7.png"></a>
+							<div class="card-body">
+								<h3 class="card-title">Production Engineering</h3>
+							</div>
 						</div>
-                    </div>
+					</div>
 				</div>
-             </div>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 
 
 
-<!-- group cards end -->
-<!--
+	<!-- group cards end -->
+	<!--
 	<div style="width: 100%; text-align: center;">
 		<table align="center" style="padding: 75px;">
 			<tr class="br">
@@ -314,47 +316,47 @@ foreach ($information as $check) {
 
 
 	-->
-			<?php
+	<?php
 
 
 
-			$selectmsg = "SELECT Username FROM prjct_ln_data";
+	$selectmsg = "SELECT Username FROM prjct_ln_data";
 
-			$resultmsg = mysqli_query($connect, $selectmsg);
+	$resultmsg = mysqli_query($connect, $selectmsg);
 
-			$datamsg = mysqli_fetch_all($resultmsg, MYSQLI_ASSOC);
-
-
-			foreach ($datamsg as $infomsg) {
+	$datamsg = mysqli_fetch_all($resultmsg, MYSQLI_ASSOC);
 
 
-				$tablenamemsg = 'user_' . $infomsg['Username'];
+	foreach ($datamsg as $infomsg) {
 
 
-
-				$credentialsmsg = "SELECT User, Message FROM `$tablenamemsg`";
-
-
-				$creditmsg = mysqli_query($connect, $credentialsmsg);
-
-				$displaynamemsg = mysqli_fetch_all($creditmsg, MYSQLI_ASSOC);
+		$tablenamemsg = 'user_' . $infomsg['Username'];
 
 
 
-				foreach ($displaynamemsg as $msg) {
-					if ($infomsg['Username'] === $user) {
+		$credentialsmsg = "SELECT User, Message FROM `$tablenamemsg`";
+
+
+		$creditmsg = mysqli_query($connect, $credentialsmsg);
+
+		$displaynamemsg = mysqli_fetch_all($creditmsg, MYSQLI_ASSOC);
+
+
+
+		foreach ($displaynamemsg as $msg) {
+			if ($infomsg['Username'] === $user) {
 
 
 
 
 
-			?>
+	?>
 
-						<li class="messages"> <?php echo $msg['Message']; ?></li>
+				<li class="messages"> <?php echo $msg['Message']; ?></li>
 
-					<?php } ?>
-				<?php } ?>
 			<?php } ?>
+		<?php } ?>
+	<?php } ?>
 	<script type="text/javascript">
 		function openSide() {
 			document.getElementById("side").style.width = "100%";
