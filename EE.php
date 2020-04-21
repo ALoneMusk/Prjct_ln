@@ -125,8 +125,8 @@ foreach ($information as $check) {
 								<button class="btn btn-success btn-lg" onclick="return fetchuser(' <?php echo ($id); ?> ')"> Show Ratings </button>
 								<h1 id="card_title" class="card-title text-grey"><br> <kbd><?php echo ($info['Name']); ?> </kbd></h1>
 								<h2 id="card_title" class="card-text"><br><span class="badge badge-warning"><?php echo ($info['Username']); ?></span></h2>
-								<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Only the person you are sending the message to will be able to view it. Also, unless you specify your identity, he or she will not know from whom the message is."></textarea>
-								<button type="submit" name="FromMe" class="btn btn-primary">Send Private Message</button>
+								<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Say something ..."></textarea>
+								<br><button type="submit" name="FromMe" class="btn btn-primary">Send Private Message</button>
 							</div>
 						</div>
 					</div>
@@ -137,14 +137,16 @@ foreach ($information as $check) {
 						<div class="modal-dialog">
 
 							<!-- Modal content-->
-							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title">Modal Header</h4>
+							<div class="modal-content d-flex ">
+								<div class="modal-header ">
+
+									<h4 class="modal-title"><span class="badge badge-primary text-center">Rate <?php echo ($info['Name']); ?></span></h4>
 								</div>
 								<div class="modal-body">
-									<p>Some text in the modal.</p>
+									<p>Some shit</p>
 								</div>
 								<div class="modal-footer">
+									<input type="submit" name="<?php echo ($id); ?>" value="Submit Response" class="btn btn-success">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 								</div>
 							</div>
@@ -154,117 +156,8 @@ foreach ($information as $check) {
 
 
 
-					<form method="POST" action="Post.php">
-						<div>
-							<div id="wrap">
-								<table style="width: 100%">
-									<tr>
-										<td class="td" style="text-align: left;">
-											<button class="rolls" style="outline: none;" onclick="return fetchuser(' <?php echo ($id); ?> ')">
-												<?php echo ($info['Username']); ?>
-											</button>
-										</td>
-										<td class="td" style="text-align: center;">
-											<textarea class="msgs" name="FromMe">
-                Only the person you are sending the message to will be able to view it. Also, unless you specify your identity, he or she will not know from whom the message is.
-                </textarea>
-										</td>
-										<td class="td" style="text-align: right;">
-											<button class="names" style="outline: none;" onclick="return fetchuser(' <?php echo ($id); ?> ')">
-												<?php echo ($info['Name']); ?>
-											</button>
-										</td>
-									</tr>
-								</table>
-								<hr>
-							</div>
-							<div id=" <?php echo ($id); ?> " style="display: none;">
-								<div class="contents">
-									<div style="color: fuchsia; text-align: center; font-size: 40px;"> What You Think: </div>
-									<br>
-									<table>
-										<tr>
-											<td class="tbl">
-												<div align="center">
-													Personality
-												</div>
-												<div align="center">
-													<input type="range" name="Personality" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Compatibility
-												</div>
-												<div align="center">
-													<input type="range" name="Compatibility" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Cleanliness
-												</div>
-												<div align="center">
-													<input type="range" name="Cleanliness" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Education
-												</div>
-												<div align="center">
-													<input type="range" name="Education" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Studies
-												</div>
-												<div align="center">
-													<input type="range" name="Studies" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Language
-												</div>
-												<div align="center">
-													<input type="range" name="Language" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Cognizance
-												</div>
-												<div align="center">
-													<input type="range" name="Cognizance" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Humorous
-												</div>
-												<div align="center">
-													<input type="range" name="Humorous" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-											<td class="tbl">
-												<div align="center">
-													Conclusion
-												</div>
-												<div align="center">
-													<input type="range" name="Conclusion" class="slider" min="1" max="100" value="20">
-												</div>
-											</td>
-										</tr>
-									</table>
-									<input type="submit" id="rate" name="<?php echo ($id); ?>" value="Submit Response" style="outline: none;">
-								</div>
-					</form>
-		</div>
-	</div>
 
-	<?php
+					<?php
 					$select = "SELECT Username FROM prjct_ln_data";
 
 					$result = mysqli_query($connect, $select);
@@ -314,140 +207,53 @@ foreach ($information as $check) {
 						}
 					}
 
-	?>
-	<div class="container">
-		<div style="color: fuchsia; text-align: center; font-size: 40px;">Others' Rating: </div>
-		<br>
-		<table>
-			<tr>
-				<td class="tbl">
-					<div align="center">
-						Personality
-					</div>
-					<div align="center">
-						<input type="range" name="prsnlty" id="rng" class="slider2" min="1" max="100" value="<?php echo ($person); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Compatibility
-					</div>
-					<div align="center">
-						<input type="range" name="cmptblty" id="rng" class="slider2" min="1" max="100" value="<?php echo ($compat); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Cleanliness
-					</div>
-					<div align="center">
-						<input type="range" name="clnlnss" id="rng" class="slider2" min="1" max="100" value="<?php echo ($clean); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Education
-					</div>
-					<div align="center">
-						<input type="range" name="dctn" id="rng" class="slider2" min="1" max="100" value="<?php echo ($edu); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Studies
-					</div>
-					<div align="center">
-						<input type="range" name="dctn" id="rng" class="slider2" min="1" max="100" value="<?php echo ($stud); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Language
-					</div>
-					<div align="center">
-						<input type="range" name="lngg" id="rng" class="slider2" min="1" max="100" value="<?php echo ($lang); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Cognizance
-					</div>
-					<div align="center">
-						<input type="range" name="cgnznc" id="rng" class="slider2" min="1" max="100" value="<?php echo ($cog); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Humor
-					</div>
-					<div align="center">
-						<input type="range" name="hmr" id="rng" class="slider2" min="1" max="100" value="<?php echo ($humor); ?>">
-					</div>
-				</td>
-				<td class="tbl">
-					<div align="center">
-						Conclusion
-					</div>
-					<div align="center">
-						<input type="range" name="cnclsn" id="rng" class="slider2" min="1" max="100" value="<?php echo ($conc); ?>">
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div style="text-align: center; font-size: 30px; color: whitesmoke; margin-top: 20px;">Based on <?php echo ($basis); ?> review(s).</div>
-	</div>
-	</div>
-	<hr>
-	<br>
-	<br>
-	<br>
-	</div>
-<?php } ?>
-<?php } ?>
+					?>
 
-<div id="side" class="sidebar">
-	<div class="closebtn" onclick="closeSide()">&#10068</div>
-	<div class="overlay-content">
-		<div style="color: red; font-size: 25px; margin-bottom: 50px;">Messages:</div>
-		<?php
-		$selectmsg = "SELECT Username FROM prjct_ln_data";
-
-		$resultmsg = mysqli_query($connect, $selectmsg);
-
-		$datamsg = mysqli_fetch_all($resultmsg, MYSQLI_ASSOC);
-
-
-		foreach ($datamsg as $infomsg) {
-
-
-			$tablenamemsg = 'user_' . $infomsg['Username'];
-
-
-
-			$credentialsmsg = "SELECT User, Message FROM `$tablenamemsg`";
-
-
-			$creditmsg = mysqli_query($connect, $credentialsmsg);
-
-			$displaynamemsg = mysqli_fetch_all($creditmsg, MYSQLI_ASSOC);
-
-
-
-			foreach ($displaynamemsg as $msg) {
-				if ($infomsg['Username'] === $username) {
-		?>
-					<li class="messages"> <?php echo $msg['Message']; ?></li>
 				<?php } ?>
 			<?php } ?>
-		<?php } ?>
-		<button class="buttonspan" id="signout" onclick="location.href='Signout.php'">Signout</button>
-		<br>
-		<br>
-		<button class="buttonspan" onclick="window.location.href = 'Issue.php';">Having an issue?</button>
-	</div>
-</div>
-</div>
+
+			<div id="side" class="sidebar">
+				<div class="closebtn" onclick="closeSide()">&#10068</div>
+				<div class="overlay-content">
+					<div style="color: red; font-size: 25px; margin-bottom: 50px;">Messages:</div>
+					<?php
+					$selectmsg = "SELECT Username FROM prjct_ln_data";
+
+					$resultmsg = mysqli_query($connect, $selectmsg);
+
+					$datamsg = mysqli_fetch_all($resultmsg, MYSQLI_ASSOC);
+
+
+					foreach ($datamsg as $infomsg) {
+
+
+						$tablenamemsg = 'user_' . $infomsg['Username'];
+
+
+
+						$credentialsmsg = "SELECT User, Message FROM `$tablenamemsg`";
+
+
+						$creditmsg = mysqli_query($connect, $credentialsmsg);
+
+						$displaynamemsg = mysqli_fetch_all($creditmsg, MYSQLI_ASSOC);
+
+
+
+						foreach ($displaynamemsg as $msg) {
+							if ($infomsg['Username'] === $username) {
+					?>
+								<li class="messages"> <?php echo $msg['Message']; ?></li>
+							<?php } ?>
+						<?php } ?>
+					<?php } ?>
+					<button class="buttonspan" id="signout" onclick="location.href='Signout.php'">Signout</button>
+					<br>
+					<br>
+					<button class="buttonspan" onclick="window.location.href = 'Issue.php';">Having an issue?</button>
+				</div>
+			</div>
+		</div>
 
 </body>
 
