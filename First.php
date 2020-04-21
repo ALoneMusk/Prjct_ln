@@ -151,6 +151,15 @@ foreach ($information as $check) {
 			background-color: navajowhite;
 			cursor: pointer;
 		}
+		.card-title
+		{
+			text-align: center;
+			color: black;
+		}
+		.card-body
+		{
+			background-color: yellow;
+		}
 	</style>
 
 </head>
@@ -190,66 +199,80 @@ foreach ($information as $check) {
 	<div class="container-fluid padding">
 		<div class="container">
 			<div class="intro">
-				<h2 class="text-center">Departments</h2>
-				<p class="text-center">See what rest of your classmates are doing</p>
+				<h2 class="text-center">Departmets</h2>
+				<p class="text-center">For what rest of your mates have been up to!</p>
 			</div>
 			<div class="container-fluid padding">
 				<div class="row padding">
 					<div class="col-md-6 col-lg-4 item">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'EE.php'">
 						<div class="card">
 							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/1.jpg"></a>
 							<div class="card-body">
 								<h3 class="card-title">Electrical Engineering</h3>
 							</div>
 						</div>
+					</button>
 					</div>
 					<div class="col-md-6 col-lg-4 item">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'CSE.php'">
 						<div class="card">
-							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/2.jpg"></a>
+							<a href="CSE.php"><img class="card-img-top" id="zoom" src="img/2.jpg"></a>
 							<div class="card-body">
 								<h3 class="card-title">Computer Science</h3>
 							</div>
 						</div>
+					</button>
 					</div>
 					<div class="col-md-6 col-lg-4 item">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'IT.php'">
 						<div class="card">
-							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/3.jpg"></a>
+							<a href="IT.php"><img class="card-img-top" id="zoom" src="img/3.jpg"></a>
 							<div class="card-body">
 								<h3 class="card-title">Information Technology</h3>
 							</div>
 						</div>
+					</button>
 					</div>
 					<div class="col-md-6 col-lg-4 item">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'ECE.php'">
 						<div class="card">
 							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/4.jpg"></a>
 							<div class="card-body">
 								<h3 class="card-title">Electronics Engineering</h3>
 							</div>
 						</div>
+					</button>
 					</div>
 					<div class="col-md-6 col-lg-4 item">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'ME.php'">
 						<div class="card">
 							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/5.jpg"></a>
 							<div class="card-body">
 								<h3 class="card-title">Mechanical Engineering</h3>
 							</div>
 						</div>
+					</button>
 					</div>
 					<div class="col-md-6 col-lg-4 item">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'CE.php'">
 						<div class="card">
 							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/6.jpg"></a>
 							<div class="card-body">
 								<h3 class="card-title">Civil Engineering</h3>
 							</div>
 						</div>
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'EE.php'">
 					</div>
-					<div class="col-md-6 col-lg-4 item">
+					<div class="col-md-6 col-lg-4 item" style="margin: 0 auto">
+						<button style="background-color: transparent; border-color: transparent; cursor: pointer; outline: none;" onclick="window.location.href = 'EE.php'">
 						<div class="card">
 							<a href="EE.php"><img class="card-img-top" id="zoom" src="img/7.png"></a>
 							<div class="card-body">
 								<h3 class="card-title">Production Engineering</h3>
 							</div>
 						</div>
+					</button>
 					</div>
 				</div>
 			</div>
