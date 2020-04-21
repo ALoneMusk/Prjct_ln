@@ -10,7 +10,7 @@ if (!$_SESSION['authorise']) {
 
 $user = $_SESSION['CRN'];
 
-include("header.php");
+//include("header.php");
 include("config.php");
 
 
@@ -26,28 +26,25 @@ foreach ($information as $check) {
 		$nameshow = $check['Name'];
 	}
 }
-
-
-
-
-
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html>
-
 <head>
-
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/gif/png" href="img/logo.png">
 	<title>
 		Your Mistakes' List!
 	</title>
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<style type="text/css">
 		body {
-			background-color: black;
+			background-color: white;
 		}
 
 		#namebut {
@@ -144,6 +141,34 @@ foreach ($information as $check) {
 </head>
 
 <body>
+<!--    Nav Bar -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand text-primary font-weight-bold" href="#"><img src="img/logo.png" height="70" width="180"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="First.php">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="Issue.php">Feedback</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="signout.php">Signout</a>
+			</li>
+		</ul>
+	</div>
+</div>	
+</nav>
+
+<!-- nav bar ends -->
 	<div style="width: 100%; text-align: center;">
 		<table align="center" style="padding: 75px;">
 			<tr class="br">

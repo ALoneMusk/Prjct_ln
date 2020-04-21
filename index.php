@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+
 include("config.php");
 
 if (isset($_POST['submit'])) {
@@ -29,18 +29,12 @@ if (isset($_POST['submit'])) {
 	if ($information['Username'] === $username || $information['Email'] === $email) {
 		echo '<script>alert("You are already registered. Get in straightaway!");</script>';
 	} else {
-
 		$name = mysqli_real_escape_string($connect, $_POST['Name']);
 		$username = mysqli_real_escape_string($connect, $_POST['Username']);
 		$email = mysqli_real_escape_string($connect, $_POST['Email']);
 		$password = mysqli_real_escape_string($connect, $_POST['Password']);
 		$branch = mysqli_real_escape_string($connect, $_POST['Branch']);
-
-
-
 		$query = "INSERT INTO prjct_ln_data(Username, Name, Email, Password, Branch) VALUES ('$username', '$name', '$email', '$password', '$branch')";
-
-
 		$table = "CREATE TABLE `$from` (
 	ID INT NOT NULL AUTO_INCREMENT,
 	User INT,
@@ -73,13 +67,15 @@ if (isset($_POST['submit'])) {
 <html>
 
 <head>
-	<title> Prjct_Ln </title>
-	<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<title> Prjct_Ln </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link rel="stylesheet" href="login.css">
 	<script type="text/javascript" src="Validation.js"></script>
 
@@ -88,11 +84,33 @@ if (isset($_POST['submit'])) {
 
 <body>
 
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand text-primary font-weight-bold" href="#"><img src="img/logo.png" height="70" width="180"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="GetIn.php">Sign In</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="admin.php">Admin</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="Issue.php">Feedback</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="voodoo.html">Voodoo</a>
+			</li>
+		</ul>
+	</div>
+</div>	
+</nav>
+
 	<form id="InputForm" method="post">
-
 		<div id="table">
-
-
 			<div>
 				<label style="font-size: 30px; color: red;">Branch:</label>
 				<select id="Branch" name="Branch" style="outline: none;">
