@@ -7,6 +7,10 @@ font-family: 'poppins', sans-serif;
 color:white;
 }
 
+#zoom:hover {
+  transform: scale(1.5);
+}
+
 .navbar {
 padding: .8rem;
 }

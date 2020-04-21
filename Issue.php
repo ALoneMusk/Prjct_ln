@@ -56,13 +56,29 @@ if (isset($_POST['submit'])) {
 </nav>
 
 <!-- nav bar ends -->
+
+<div class="container">
+
+<div class="row">
+
+	<div class="col-xl-8 offset-xl-2 py-5">
+		<p class="lead">Please expain your problems in detail including your Name, Branch, CRN and valid email address via which we may contact you regarding your issue</p>
 	<form method="POST">
-		<div style="text-align: center;">
-			<input type="textarea" name="Issue" style="text-align: center; ">
-			<br>
-			<br>
-			<input type="submit" name="submit" value="And that's where I got stuck." class = " btn btn-danger">
+	<div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">   I would like to suggest   </label>
+                    <textarea id="form_message" name="Issue" class="form-control" placeholder="Write anything ..." rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
 		</div>
+		</div>
+        </div>
+    </div>
 	</form>
 </body>
 </html>

@@ -39,9 +39,11 @@ foreach ($information as $check) {
 	</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="card.css">
 	<style type="text/css">
 		body {
 			background-color: white;
@@ -59,7 +61,12 @@ foreach ($information as $check) {
 			color: red;
 			text-align: center;
 		}
-
+		#zoom:hover {
+			transform-style: preserve-3d;
+			transform: rotateY(360deg);
+			transition: transform 2s;
+ 
+}
 		.closebtn {
 			color: red;
 			cursor: pointer;
@@ -121,6 +128,12 @@ foreach ($information as $check) {
 
 		}
 
+		h3{
+		color: grey;
+		font-size: 20px;
+		font-kerning: 20px;		
+	}
+
 		.button {
 			color: deepskyblue;
 			outline-color: transparent;
@@ -169,6 +182,82 @@ foreach ($information as $check) {
 </nav>
 
 <!-- nav bar ends -->
+
+<!-- gropu cards for subjects starts  -->
+
+<div class="container-fluid padding">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Departments</h2>
+                <p class="text-center">See what rest of your classmates are doing</p>
+			</div>
+			<div class="container-fluid padding">
+            <div class="row padding">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/1.jpg"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Electrical Engineering</h3>
+						</div>
+                    </div>
+				</div>
+				<div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/2.jpg"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Computer Science</h3>
+						</div>
+                    </div>
+				</div>
+				<div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/3.jpg"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Information Technology</h3>
+						</div>
+                    </div>
+				</div>
+				<div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/4.jpg"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Electronics Engineering</h3>
+						</div>
+                    </div>
+				</div>
+				<div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/5.jpg"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Mechanical Engineering</h3>
+						</div>
+                    </div>
+				</div>
+				<div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/6.jpg"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Civil Engineering</h3>
+						</div>
+                    </div>
+				</div>
+				<div class="col-md-6 col-lg-4 item">
+                    <div class="card">
+						<a href="EE.php"><img class="card-img-top" id="zoom" src="img/7.png"></a>
+						<div class="card-body">
+                        <h3 class="card-title">Production Engineering</h3>
+						</div>
+                    </div>
+				</div>
+             </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- group cards end -->
+<!--
 	<div style="width: 100%; text-align: center;">
 		<table align="center" style="padding: 75px;">
 			<tr class="br">
@@ -224,13 +313,7 @@ foreach ($information as $check) {
 	</div>
 
 
-
-
-	<div id="side" class="sidebar">
-		<div class="closebtn" onclick="closeSide()">&#10068</div>
-		<div class="overlay-content">
-			<div style="color: red; font-size: 25px; margin-bottom: 50px;">Messages:</div>
-
+	-->
 			<?php
 
 
@@ -272,16 +355,6 @@ foreach ($information as $check) {
 					<?php } ?>
 				<?php } ?>
 			<?php } ?>
-
-			<button class="buttonspan" id="signout" onclick="location.href='Signout.php'">Signout</button>
-			<br>
-			<br>
-			<button class="buttonspan" onclick="window.location.href = 'Issue.php';">Having an issue?</button>
-		</div>
-	</div>
-
-
-
 	<script type="text/javascript">
 		function openSide() {
 			document.getElementById("side").style.width = "100%";
