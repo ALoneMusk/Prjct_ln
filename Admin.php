@@ -2,7 +2,7 @@
 
 
 
-$connect = mysqli_connect('localhost', 'root', '', 'prjct_ln');
+$connect = mysqli_connect('localhost', 'root', ' ', 'prjct_ln');
 	if(!$connect)
 	{
 		echo "Connection error" . mysqli_connect_error();
@@ -12,7 +12,7 @@ $connect = mysqli_connect('localhost', 'root', '', 'prjct_ln');
 	{
 		$lucky = $_POST['Name'];
 
-		$query = "INSERT INTO lucky(Lucky) VALUES ('$lucky')";
+		$query = "INSERT INTO lucky(Lucky) VALUES ('')";
 
 
 }
