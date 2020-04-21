@@ -2,7 +2,7 @@
 
 $host = "localhost"; // Host name 
 $user = "root";     // Mysql user 
-$pass = "may";     // password
+$pass = "";     // password
 $db   =  "prjct_ln";
 
 $connect = mysqli_connect("$host", "$user", "$pass", "$db");
