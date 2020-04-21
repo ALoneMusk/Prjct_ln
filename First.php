@@ -121,7 +121,7 @@ foreach ($information as $check) {
 			display: inline-block;
 			vertical-align: top;
 			color: pink;
-			float: right;
+
 		}
 
 		.button {
@@ -144,18 +144,6 @@ foreach ($information as $check) {
 </head>
 
 <body>
-
-
-	<div id="title">
-		<button id="namebut" ondblclick="location.href='Admin.php'" style="outline: none;">
-			Prjct_ln
-		</button>
-		<span id="span" onclick="openSide()">&#10068</span>
-		<li id="username">
-			Welcome, <?php echo ($nameshow) . '!'; ?>
-		</li>
-	</div>
-
 	<div style="width: 100%; text-align: center;">
 		<table align="center" style="padding: 75px;">
 			<tr class="br">

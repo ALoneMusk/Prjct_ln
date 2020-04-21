@@ -2,7 +2,6 @@
 include("header.php");
 include("config.php");
 
-
 if (isset($_POST['submit'])) {
 	$username = $_POST['Username'];
 
@@ -88,6 +87,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+
 	<form id="InputForm" method="post">
 
 		<div id="table">
